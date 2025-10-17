@@ -6,10 +6,28 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background: linear-gradient(135deg, #562E84 0%, #4a2772 100%);
+  color: #535355;
+  min-height: 100vh;
 }
 
 .container-custom {
   @apply max-w-7xl mx-auto px-4 py-8;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Pulse animation for WhatsApp button */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }

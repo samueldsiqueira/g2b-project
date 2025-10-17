@@ -10,13 +10,23 @@ const config: Config = {
     extend: {
       colors: {
         g2b: {
-          orange: '#f7931e',
-          gray: '#666666',
-          lightgray: '#f5f5f5',
+          purple: '#4a2772',        // Roxo principal (header)
+          darkpurple: '#562E84',    // Roxo escuro (fundo body)
+          lightpurple: '#4D2977',   // Roxo claro (títulos)
+          brown: '#8F654D',         // Marrom (navegação)
+          gray: '#535355',          // Cinza (textos)
+          darkgray: '#333333',      // Cinza escuro
+          yellow: '#EEC218',        // Amarelo (destaques)
         }
       },
       fontFamily: {
         sans: ['Open Sans', 'sans-serif'],
+      },
+      backgroundImage: {
+        'body-pattern': "url('/images/bkg_body.png')",
+        'header-pattern': "url('/images/bkg_header.png')",
+        'home-txt': "url('/images/bkg_home_txt.jpg')",
+        'home-sidebar': "url('/images/bkg_home_sidebar.jpg')",
       },
     },
   },
