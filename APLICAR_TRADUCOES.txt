@@ -1,0 +1,21 @@
+GUIA: COMO APLICAR TRADUÇÕES
+
+SITUAÇÃO ATUAL:
+✅ Traduções PT e EN estão COMPLETAS em locales/
+✅ Home, Header, Footer estão TRADUZIDOS
+❌ Sobre, Soluções, Capacitação, Assessoria, Biblioteca NÃO estão
+
+SOLUÇÃO: Em cada página, adicionar no topo:
+'use client';
+import { useLanguage } from '@/locales/LanguageContext';
+
+No componente:
+const { t } = useLanguage();
+
+Substituir textos hardcoded por: {t.about.hero.title} etc
+
+Arquivo completo das traduções está em:
+- locales/pt.ts (português)  
+- locales/en.ts (inglês)
+
+Teste clicando em PT/EN no header.

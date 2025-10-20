@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useLanguage } from '@/locales/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <header className="bg-g2b-purple shadow-lg sticky top-0 z-50">
@@ -18,32 +21,38 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-white hover:text-g2b-yellow font-semibold transition-colors">
-              Home
+              {t.nav.home}
             </Link>
             <Link href="/sobre" className="text-white hover:text-g2b-yellow font-semibold transition-colors">
-              Sobre
+              {t.nav.about}
             </Link>
             <Link href="/solucoes" className="text-white hover:text-g2b-yellow font-semibold transition-colors">
-              Soluções
+              {t.nav.solutions}
             </Link>
             <Link href="/capacitacao" className="text-white hover:text-g2b-yellow font-semibold transition-colors">
-              Capacitação
+              {t.nav.training}
             </Link>
             <Link href="/assessoria" className="text-white hover:text-g2b-yellow font-semibold transition-colors">
-              Assessoria
+              {t.nav.consulting}
             </Link>
             <Link href="/biblioteca" className="text-white hover:text-g2b-yellow font-semibold transition-colors">
-              Biblioteca
+              {t.nav.library}
             </Link>
           </nav>
 
-          {/* Contact Button Desktop */}
-          <a 
-            href="mailto:contato@g2b.com.br" 
-            className="hidden md:block bg-g2b-yellow hover:bg-yellow-500 text-g2b-darkpurple px-6 py-2 rounded-lg font-semibold transition-all hover:scale-105"
-          >
-            Contato
-          </a>
+          {/* Language Selector & Contact Button Desktop */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Language Selector - HIDDEN */}
+            <div className="hidden">
+              <LanguageSelector />
+            </div>
+            <a 
+              href="mailto:contato@g2b.com.br" 
+              className="bg-g2b-yellow hover:bg-yellow-500 text-g2b-darkpurple px-6 py-2 rounded-lg font-semibold transition-all hover:scale-105"
+            >
+              {t.nav.contact}
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -65,55 +74,61 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden absolute top-full left-0 right-0 bg-g2b-purple border-t border-g2b-darkpurple shadow-lg">
+          <nav className="md:hidden fixed top-[73px] left-0 right-0 bg-g2b-purple border-t border-g2b-darkpurple shadow-lg z-40 max-h-[calc(100vh-73px)] overflow-y-auto">
             <div className="flex flex-col py-4">
               <Link 
                 href="/" 
                 className="text-white hover:bg-g2b-darkpurple px-6 py-3 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                {t.nav.home}
               </Link>
               <Link 
                 href="/sobre" 
                 className="text-white hover:bg-g2b-darkpurple px-6 py-3 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Sobre
+                {t.nav.about}
               </Link>
               <Link 
                 href="/solucoes" 
                 className="text-white hover:bg-g2b-darkpurple px-6 py-3 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Soluções
+                {t.nav.solutions}
               </Link>
               <Link 
                 href="/capacitacao" 
                 className="text-white hover:bg-g2b-darkpurple px-6 py-3 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Capacitação
+                {t.nav.training}
               </Link>
               <Link 
                 href="/assessoria" 
                 className="text-white hover:bg-g2b-darkpurple px-6 py-3 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Assessoria
+                {t.nav.consulting}
               </Link>
               <Link 
                 href="/biblioteca" 
                 className="text-white hover:bg-g2b-darkpurple px-6 py-3 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Biblioteca
+                {t.nav.library}
               </Link>
+              
+              {/* Language Selector Mobile - HIDDEN */}
+              <div className="hidden px-6 py-3">
+                <LanguageSelector />
+              </div>
+              
               <a 
                 href="mailto:contato@g2b.com.br" 
                 className="bg-g2b-yellow text-g2b-darkpurple px-6 py-3 mx-6 mt-4 rounded-lg font-semibold text-center hover:bg-yellow-500 transition-colors"
               >
-                Contato
+                {t.nav.contact}
               </a>
             </div>
           </nav>
