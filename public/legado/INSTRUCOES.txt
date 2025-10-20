@@ -1,0 +1,61 @@
+═══════════════════════════════════════════════════════════════
+    SITE G2B RECONSTRUÍDO - INSTRUÇÕES DE USO
+═══════════════════════════════════════════════════════════════
+
+📋 SOBRE ESTE SITE
+------------------
+Este é o website da G2B (www.g2b.com.br) reconstruído a partir
+do snapshot do Wayback Machine de 13 de julho de 2024.
+
+🗂️ ESTRUTURA DE ARQUIVOS
+-------------------------
+✓ 6 páginas HTML (index, sobre, soluções, capacitação, assessoria, biblioteca)
+✓ 1 arquivo CSS (css2/styles.css)
+✓ 28 imagens (logos, backgrounds, botões)
+✓ 1 favicon (g2b.ico)
+
+🌐 COMO VISUALIZAR O SITE
+--------------------------
+Opção 1: Abrir diretamente
+   • Clique duas vezes no arquivo index.html
+   • O site abrirá no seu navegador padrão
+
+Opção 2: Usar servidor web local (recomendado)
+   
+   Python 3:
+   $ cd g2b_reconstructed
+   $ python3 -m http.server 8000
+   # Abra: http://localhost:8000
+   
+   Python 2:
+   $ python -m SimpleHTTPServer 8000
+   
+   Node.js:
+   $ npx serve
+   # Ou: $ npx http-server
+
+📄 PÁGINAS DISPONÍVEIS
+-----------------------
+• Home (index.html) - Apresentação da empresa
+• Sobre G2B (sobre.html) - História e valores
+• Soluções (solucoes.html) - Serviços oferecidos
+• Capacitação (capacitacao.html) - Treinamentos
+• Assessoria (assessoria.html) - Consultoria
+• Biblioteca G2B (biblioteca.html) - Recursos
+
+✅ STATUS DO SITE
+-----------------
+✓ Todas as páginas HTML recuperadas
+✓ CSS completo com todos os estilos
+✓ Todas as imagens necessárias incluídas
+✓ Navegação entre páginas funcionando
+✓ Layout e design preservados
+
+⚠️ OBSERVAÇÕES
+---------------
+• Site funcional para visualização offline
+• Links externos podem não funcionar
+• E-mails e formulários não estão ativos
+• Baseado no snapshot de 2024-07-13
+
+═══════════════════════════════════════════════════════════════

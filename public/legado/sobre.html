@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="language" content="pt-br" />
+        <meta name="description" content="G2B é uma empresa criada por Gisele Blak Bernat em 2008, com objetivo de atuar no segmento de Treinamento e Consultoria com foco em GestÃ£o de Projetos nos diversos setores da economia." />
+        <link href='http://fonts.googleapis.com/css?family=Open Sans:400,600,700' rel='stylesheet' type='text/css' />
+        <link href="css2/styles.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript">
+            // <![CDATA[
+            $(window).load(function () {
+                var step = 25;
+                var scrolling = false;
+                
+                // Wire up events for the 'scrollUp' link:
+                $(".scroll-up").bind("click", function(event) {
+                    event.preventDefault();
+                }).bind("mouseover", function(event) {
+                    scrolling = true;
+                    scrollContent("up");
+                }).bind("mouseout", function(event) {
+                    scrolling = false;
+                });
+                
+                $(".scroll-down").bind("click", function(event) {
+                    event.preventDefault();
+                }).bind("mouseover", function(event) {
+                    scrolling = true;
+                    scrollContent("down");
+                }).bind("mouseout", function(event) {
+                    scrolling = false;
+                });
+                
+                function scrollContent(direction) {
+                    var amount = (direction === "up" ? "-=1px" : " =1px");
+                    $(".scroll-content").animate({
+                        scrollTop: amount
+                    }, 1, function() {
+                        if (scrolling) {
+                            scrollContent(direction);
+                        }
+                    });
+                }
+            });
+            // ]]>
+        </script>
+        <title>Sobre G2B | G2B - Treinamento Executivo e Assessoria Empresarial</title>
+    </head>
+    <body class="sobre">
+        <div id="outer-wrapper" class="cf">
+            <div id="inner-wrapper" class="cf">
+                <div id="header">
+                    <ul id="nav">
+                        <li class="nav-home"><a href="index.html">Home</a></li>
+                        <li class="nav-sobre"><a href="sobre.html">Sobre G2B</a></li>
+                        <li class="nav-solucoes"><a href="solucoes.html">Soluções</a></li>
+                        <li class="nav-biblio"><a href="biblioteca.html">Biblioteca G2B</a></li>
+                    </ul>
+                    <p id="contact">E-mail <br /> <a href="mailto:contato@g2b.com.br">contato@g2b.com.br</a></p>
+                </div>
+                <div id="content">
+                    <div class="section column">
+                        <h2 class="sobre-title column">Sobre a G2B</h2>
+                        <div class="sobre-txt column">
+                            <p>A G2B ou "Good to Be" reflete as iniciais do nome de sua consultora fundadora Gisele Blak Bernat, hoje responsável por dirigir a empresa, estando a frente dos projetos de clientes da G2B.</p>
+                            <p>Com mais de 10 anos de atuação em Gerenciamento de Projetos em empresas de grande porte e uma larga experiência em treinamentos executivos por instituições de renome, Gisele Blak Bernat criou, em 2008, a G2B Treinamento Executivo &amp; Assessoria Empresarial LTDA., uma empresa com objetivo de atuar no segmento de Treinamento e Consultoria com foco em Gestão de Projetos nos diversos setores da economia.</p>
+                            <p>A G2B oferece em seu portfólio de soluções:</p>
+                        </div>
+                        <ul class="sobre-solucoes column">
+                            <li class="btn-capacitacao"><a class="hide-text" href="capacitacao.html">Capacitação</a></li>
+                            <li class="btn-assessoria"><a class="hide-text" href="assessoria.html">Assessoria</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar">
+                        <div class="sobre-box">
+                            <h3 class="sobre-box-title">Gisele Blak Bernat, MSc, PMP</h3>
+                            <div class="scroll-wrapper">
+                                <div class="scroll-mask">
+                                    <div class="scroll-content">
+                                        <p>Gisele Blak Bernat é <strong>Mestre em Engenharia Civil</strong> de Produção com ênfase em Sistemas de Gestão, Produção e Qualidade pela UFF. <strong>Master Certificate in Project Management</strong> pela <strong>ESI & George Washington University</strong>. Membro do PMI Chapter Rio com <strong>certificação Project Management Professional (PMP)</strong> desde 2002. Programa Internacional de Desarollo Gerencial pela Telefônica Móviles & IEDE, na Espanha. MBA Executivo de Gestão de Negócios pelo IBMEC. Bacharel em CiÃªncias com Dignidade Acadêmica "cum laude" pela UFRJ (Engenheira Civil),</p>
+                                        <p>Professora do Programa de Aperfeiçooamento em Gestão de Projetos do COPPEAD, da Pós-Graduação em Gestão e Gerenciamento de Projetos da Escola Politécnica da UFRJ e dos cursos de MBA em Gestão de Projetos e MBA em Gestão de Negócios Imobiliários e da Construção Civil da FGV. Autora de diversos artigos em congressos e coautora do livro Capacitação em Gerenciamento de Projetos pela editora Brasport.</p>
+                                        <p>Em 2010, Gisele Blak Bernat foi convidada a integrar a Diretoria Executiva do IPMA Brasil® (International Project Management Association) e realizou trabalho voluntÃ¡rio como Diretora de Marketing da instituiÃ§Ã£o.</p>
+                                        <p>Experiência de mais de dez anos em gerenciamento de projetos de grande porte em empresas de Engenharia Civil e de TelecomunicaÃ§Ãµes, tendo participado como Gerente de Projetos da execuÃ§Ã£o do Parque GrÃ¡fico do Jornal O Globo pela Odebrecht e do <em>start-up</em> da Intelig Telecom pela Bechtel MÃ©todo Telecom, bem como projetos de implantaÃ§Ã£o da rede GSM, implantaÃ§Ã£o de plataformas de serviÃ§os de valor agregado (Caixa Postal, MMS, GTW VAS) e lanÃ§amento de produtos de marketing na TelefÃ³nica Celular/Vivo. Atuou tambÃ©m na Ã¡rea de GestÃ£o de NegÃ³cios, tendo sido responsÃ¡vel pela GestÃ£o e Desenvolvimento de Produtos e ServiÃ§os na Diretoria de Marketing da Vivo.</p>
+                                        <p>Atualmente é sócia e Diretora Executiva da G2B Treinamento Executivo &amp; Assessoria Empresarial LTDA., tendo atuado como Consultora e Gerente de Projetos para a migração da infraestrutura de TI e Telecomunicações da Sul América Seguros para sua nova matriz, Consultora de apoio à  Gestão do Projeto Integrado de Gás Peruano junto à  Odebrecht em parceria com a Petrobrás, como Consultora de apoio à  Gestão de Projetos do Programa RENUVA da Universidade Veiga de Almeida, adquirida pela americana Whitney International e, recentemente, como Consultora e Professora de Gestão de Projetos para a fábrica da Purina PetCare (NPPC) do grupo Nestlé.</p>
+                                    </div>
+                                </div>
+                                <a class="scroll-up hide-text" href="#">up</a>
+                                <a class="scroll-down hide-text" href="#">down</a>
+                            </div>
+                        </div>
+                        <a class="sobre-rh" href="mailto:rh@g2b.com.br">envie seu currículo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
