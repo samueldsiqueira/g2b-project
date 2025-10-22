@@ -2,7 +2,7 @@
 
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-import { useLanguage } from '@/locales/LanguageContext';
+import { useLanguage } from '../../locales/LanguageContext';
 
 export default function Sobre() {
   const { t } = useLanguage();

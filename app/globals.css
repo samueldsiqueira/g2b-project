@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(135deg, #562E84 0%, #4a2772 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #ffffff;
   color: #535355;
   min-height: 100vh;
 }
@@ -30,4 +30,29 @@ html {
 
 .animate-ping {
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Swiper custom styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #6B46C1 !important;
+  font-weight: bold;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #6B46C1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #F59E0B !important;
 }
