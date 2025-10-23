@@ -11,12 +11,86 @@ import TestimonialCarousel from '../components/TestimonialCarousel';
 import Footer from '../components/Footer';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 import ScrollToTop from '../components/ScrollToTop';
+import StatsSection from '../components/StatsSection';
+import ResultsSection from '../components/ResultsSection';
+import VideoSection from '../components/VideoSection';
+import FAQSection from '../components/FAQSection';
 
 export default function ModernHome() {
 	const { t } = useLanguage();
 	const { scrollYProgress } = useScroll();
 	const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 	const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
+
+	// Estatísticas com contador animado
+	const stats = [
+		{ value: 15, label: 'Anos de Experiência', suffix: '+' },
+		{ value: 200, label: 'Empresas Atendidas', suffix: '+' },
+		{ value: 5000, label: 'Profissionais Capacitados', suffix: '+' },
+		{ value: 98, label: 'Satisfação dos Clientes', suffix: '%' },
+	];
+
+	// Cases de sucesso / Resultados
+	const results = [
+		{
+			title: 'Compliance em Indústria Farmacêutica',
+			description: 'Implementação completa de sistema de governança corporativa, resultando em redução de 80% em não conformidades e certificação ISO em tempo recorde.',
+			image: '/images/trabalhos.jpeg',
+			metric: '80% Redução',
+			ctaText: 'Ver Mais',
+			ctaLink: 'https://wa.me/5511999999999?text=Olá! Vi o case de compliance farmacêutica e gostaria de saber mais',
+		},
+		{
+			title: 'Capacitação de Equipe Executiva',
+			description: 'Programa de treinamento customizado para liderança estratégica, resultando em aumento de 50% na eficiência de processos decisórios.',
+			image: '/images/trabalhos2.jpeg',
+			metric: '+50% Eficiência',
+			ctaText: 'Saiba Mais',
+			ctaLink: 'https://wa.me/5511999999999?text=Tenho interesse em capacitação para equipe executiva',
+		},
+		{
+			title: 'Auditoria e Adequação LGPD',
+			description: 'Adequação completa à Lei Geral de Proteção de Dados com implementação de políticas, procedimentos e certificação de conformidade.',
+			image: '/images/trabalho3.jpeg',
+			metric: '100% Conforme',
+			ctaText: 'Consultar',
+			ctaLink: 'https://wa.me/5511999999999?text=Preciso adequar minha empresa à LGPD',
+		},
+	];
+
+	// FAQ - Perguntas Frequentes
+	const faqs = [
+		{
+			question: 'Quanto tempo dura o processo de consultoria?',
+			answer: 'O tempo varia conforme a complexidade do projeto, mas geralmente entre 3 a 6 meses. Fazemos um diagnóstico inicial gratuito para estimar o prazo específico para sua empresa, considerando seu porte, maturidade em governança e objetivos.',
+			whatsappMessage: 'Olá! Gostaria de saber mais sobre o prazo de consultoria para minha empresa',
+		},
+		{
+			question: 'Qual o investimento necessário?',
+			answer: 'Cada projeto é único e personalizado de acordo com as necessidades específicas de sua empresa. Após o diagnóstico inicial (gratuito), apresentamos uma proposta sob medida com valores transparentes e opções de pagamento. Entre em contato para agendar uma conversa sem compromisso.',
+			whatsappMessage: 'Quero saber mais sobre investimento e condições de pagamento',
+		},
+		{
+			question: 'Vocês atendem empresas do meu segmento?',
+			answer: 'Sim! Atendemos empresas de diversos segmentos: indústria, serviços, tecnologia, saúde, educação, financeiro, varejo e outros. Nossa experiência de mais de 15 anos nos permite adaptar as melhores práticas de governança e compliance para cada realidade setorial.',
+			whatsappMessage: 'Gostaria de saber se atendem o segmento [DIGITE SEU SEGMENTO]',
+		},
+		{
+			question: 'Os treinamentos são presenciais ou online?',
+			answer: 'Oferecemos ambas as modalidades com total flexibilidade! Você escolhe o formato que melhor se adapta à sua realidade: presencial (in company), online ao vivo ou híbrido. Todos os formatos mantêm a mesma qualidade, interatividade e material didático premium.',
+			whatsappMessage: 'Tenho interesse em treinamentos. Vamos conversar sobre o melhor formato?',
+		},
+		{
+			question: 'Vocês oferecem suporte pós-implementação?',
+			answer: 'Sim! Nosso compromisso não termina com a entrega do projeto. Oferecemos acompanhamento contínuo, suporte técnico e mentorias periódicas para garantir que os resultados sejam sustentáveis a longo prazo. A transformação é permanente, não temporária.',
+			whatsappMessage: 'Quero saber mais sobre o suporte e acompanhamento oferecido',
+		},
+		{
+			question: 'Como funciona o diagnóstico inicial gratuito?',
+			answer: 'O diagnóstico é uma conversa de 30-45 minutos onde entendemos seus desafios, avaliamos a maturidade atual da sua governança/compliance e identificamos oportunidades de melhoria. É totalmente sem compromisso e você já sai com insights valiosos.',
+			whatsappMessage: 'Quero agendar um diagnóstico gratuito',
+		},
+	];
 
 	const services = [
 		{
@@ -111,13 +185,6 @@ export default function ModernHome() {
 			company: 'Indústria ABC',
 			text: 'Os cursos de capacitação elevaram o nível técnico de nossa equipe. Investimento com retorno garantido.',
 		},
-	];
-
-	const stats = [
-		{ number: '10+', label: 'Anos de Experiência' },
-		{ number: '500+', label: 'Clientes Atendidos' },
-		{ number: '1000+', label: 'Treinamentos Realizados' },
-		{ number: '98%', label: 'Satisfação' },
 	];
 
 	return (
@@ -229,26 +296,8 @@ export default function ModernHome() {
 				</motion.div>
 			</section>
 
-			{/* Stats Section */}
-			<section className='py-20 bg-white'>
-				<div className='max-w-7xl mx-auto px-6'>
-					<div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-						{stats.map((stat, index) => (
-							<motion.div
-								key={index}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ delay: index * 0.1 }}
-								viewport={{ once: true }}
-								className='text-center'
-							>
-								<div className='text-4xl md:text-5xl font-bold text-g2b-purple mb-2'>{stat.number}</div>
-								<div className='text-g2b-gray font-semibold'>{stat.label}</div>
-							</motion.div>
-						))}
-					</div>
-				</div>
-			</section>
+			{/* Stats Section - Números Impressionantes */}
+			<StatsSection stats={stats} />
 
 			{/* About Section */}
 			<section id='about' className='py-20 bg-gray-50'>
@@ -453,6 +502,9 @@ export default function ModernHome() {
 				</div>
 			</section>
 
+			{/* Results Section - Cases de Sucesso */}
+			<ResultsSection results={results} />
+
 			{/* Training Section */}
 			<section id='training' className='py-20 bg-gradient-to-br from-g2b-purple to-g2b-darkpurple text-white'>
 				<div className='max-w-7xl mx-auto px-6'>
@@ -593,6 +645,13 @@ export default function ModernHome() {
 				</div>
 			</section>
 
+			{/* Video Section - Depoimento em Vídeo */}
+			<VideoSection
+				videoUrl='https://www.youtube.com/shorts/uUfLRVSZVlo?feature=share'
+				title='Veja Nosso Trabalho em Ação'
+				description='Depoimento real de clientes que transformaram suas empresas com a G2B'
+			/>
+
 			{/* Testimonials Section */}
 			<section className='py-20 bg-white'>
 				<div className='max-w-7xl mx-auto px-6'>
@@ -611,6 +670,9 @@ export default function ModernHome() {
 					<TestimonialCarousel testimonials={testimonials} />
 				</div>
 			</section>
+
+			{/* FAQ Section - Perguntas Frequentes */}
+			<FAQSection faqs={faqs} />
 
 			{/* Contact CTA Section */}
 			<section
