@@ -15,6 +15,11 @@ import StatsSection from '../components/StatsSection';
 import ResultsSection from '../components/ResultsSection';
 import VideoSection from '../components/VideoSection';
 import FAQSection from '../components/FAQSection';
+import ExitIntentPopup from '../components/ExitIntentPopup';
+import HeroCTA from '../components/HeroCTA';
+import UrgencyBadge from '../components/UrgencyBadge';
+import CertificationsSection from '../components/CertificationsSection';
+import StickyMobileBar from '../components/StickyMobileBar';
 
 export default function ModernHome() {
 	const { t } = useLanguage();
@@ -62,12 +67,12 @@ export default function ModernHome() {
 	const faqs = [
 		{
 			question: 'Quanto tempo dura o processo de consultoria?',
-			answer: 'O tempo varia conforme a complexidade do projeto, mas geralmente entre 3 a 6 meses. Fazemos um diagnóstico inicial gratuito para estimar o prazo específico para sua empresa, considerando seu porte, maturidade em governança e objetivos.',
+			answer: 'O tempo varia conforme a complexidade do projeto, mas geralmente entre 3 a 6 meses. Fazemos uma análise inicial para estimar o prazo específico para sua empresa, considerando seu porte, maturidade em governança e objetivos.',
 			whatsappMessage: 'Olá! Gostaria de saber mais sobre o prazo de consultoria para minha empresa',
 		},
 		{
 			question: 'Qual o investimento necessário?',
-			answer: 'Cada projeto é único e personalizado de acordo com as necessidades específicas de sua empresa. Após o diagnóstico inicial (gratuito), apresentamos uma proposta sob medida com valores transparentes e opções de pagamento. Entre em contato para agendar uma conversa sem compromisso.',
+			answer: 'Cada projeto é único e personalizado de acordo com as necessidades específicas de sua empresa. Após a análise inicial, apresentamos uma proposta sob medida com valores transparentes e opções de pagamento. Entre em contato para agendar uma conversa sem compromisso.',
 			whatsappMessage: 'Quero saber mais sobre investimento e condições de pagamento',
 		},
 		{
@@ -86,9 +91,9 @@ export default function ModernHome() {
 			whatsappMessage: 'Quero saber mais sobre o suporte e acompanhamento oferecido',
 		},
 		{
-			question: 'Como funciona o diagnóstico inicial gratuito?',
-			answer: 'O diagnóstico é uma conversa de 30-45 minutos onde entendemos seus desafios, avaliamos a maturidade atual da sua governança/compliance e identificamos oportunidades de melhoria. É totalmente sem compromisso e você já sai com insights valiosos.',
-			whatsappMessage: 'Quero agendar um diagnóstico gratuito',
+			question: 'Como posso entrar em contato?',
+			answer: 'Entre em contato conosco através do WhatsApp, redes sociais ou pelo formulário de contato. Estamos à disposição para entender suas necessidades e apresentar as melhores soluções para sua empresa.',
+			whatsappMessage: 'Olá! Gostaria de conversar sobre as soluções G2B',
 		},
 	];
 
@@ -192,6 +197,8 @@ export default function ModernHome() {
 			<ModernHeader />
 			<WhatsAppFloat />
 			<ScrollToTop />
+			<ExitIntentPopup />
+			<StickyMobileBar />
 
 			{/* Hero Section com Parallax */}
 			<section id='hero' className='relative min-h-screen flex items-center justify-center overflow-hidden'>
@@ -229,11 +236,11 @@ export default function ModernHome() {
 							}}
 						>
 							<Image
-								src='/images/brand_colored.svg'
+								src='/images/logo_fundo_transparente.png'
 								alt='G2B Logo'
-								width={1200}
-								height={400}
-								className='w-auto h-96 md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
+								width={600}
+								height={200}
+								className='w-auto h-64 md:h-80 lg:h-96 object-contain'
 								priority
 							/>
 						</motion.div>
@@ -252,52 +259,21 @@ export default function ModernHome() {
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
-						className='text-xl md:text-2xl lg:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed'
+						className='text-xl md:text-2xl lg:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed'
 					>
 						{t.home.hero.subtitle}
 					</motion.p>
 
-					<motion.div
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.6 }}
-						className='flex flex-col sm:flex-row gap-6 justify-center'
-					>
-						<motion.a
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							href='mailto:contato@g2b.com.br'
-							className='bg-g2b-yellow hover:bg-yellow-500 text-g2b-darkpurple px-10 py-5 rounded-full font-bold text-lg transition-all shadow-2xl'
-						>
-							{t.home.hero.ctaPrimary}
-						</motion.a>
-						<motion.button
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							onClick={() => {
-								document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-							}}
-							className='bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-10 py-5 rounded-full font-bold text-lg transition-all border-2 border-white/30'
-						>
-							{t.home.hero.ctaSecondary}
-						</motion.button>
-					</motion.div>
-				</motion.div>
-
-				{/* Scroll Indicator */}
-				<motion.div
-					animate={{ y: [0, 10, 0] }}
-					transition={{ repeat: Infinity, duration: 2 }}
-					className='absolute bottom-10 left-1/2 transform -translate-x-1/2'
-				>
-					<div className='w-6 h-10 border-2 border-white rounded-full flex justify-center'>
-						<div className='w-1 h-3 bg-white rounded-full mt-2' />
-					</div>
+					{/* Hero CTA Buttons */}
+					<HeroCTA />
 				</motion.div>
 			</section>
 
 			{/* Stats Section - Números Impressionantes */}
 			<StatsSection stats={stats} />
+
+			{/* Certifications Section - Certificações e Parceiros */}
+			<CertificationsSection />
 
 			{/* About Section */}
 			<section id='about' className='py-20 bg-gray-50'>
