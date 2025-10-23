@@ -3,6 +3,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import WhatsAppFloat from './WhatsAppFloat';
+import ScrollToTop from './ScrollToTop';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ export default function Layout({ children }: LayoutProps) {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <ScrollToTop />
     </div>
   );
 }

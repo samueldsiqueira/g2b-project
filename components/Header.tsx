@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { useLanguage } from '@/locales/LanguageContext';
+import { useLanguage } from '../locales/LanguageContext';
 import LanguageSelector from './LanguageSelector';
 
 export default function Header() {
