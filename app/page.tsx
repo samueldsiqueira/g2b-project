@@ -336,7 +336,7 @@ export default function ModernHome() {
 											</a>
 
 											<a
-												href='https://www.instagram.com/g2b.treinamento'
+												href='https://www.instagram.com/g2b_gestaodeprojetos'
 												target='_blank'
 												rel='noopener noreferrer'
 												className='flex items-center gap-2 bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all shadow-lg'
