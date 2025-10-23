@@ -1,31 +1,19 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { LanguageProvider } from "../locales/LanguageContext";
-import GoogleAnalytics from "../components/GoogleAnalytics";
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "G2B - Treinamento Executivo e Assessoria Empresarial",
-  description: "G2B é uma empresa criada por Gisele Blak Bernat em 2008, com objetivo de atuar no segmento de Treinamento e Consultoria com foco em Gestão de Projetos nos diversos setores da economia.",
-  icons: {
-    icon: '/favicon.ico',
-  },
+	title: 'G2B',
+	description: 'Página em construção',
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="pt-BR">
-      <head>
-        <GoogleAnalytics measurementId="G-XXXXXXXXXX" />
-      </head>
-      <body>
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
-      </body>
-    </html>
-  );
+	return (
+		<html lang='pt-BR'>
+			<body>{children}</body>
+		</html>
+	);
 }
