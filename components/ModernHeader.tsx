@@ -37,14 +37,10 @@ export default function ModernHeader() {
 	];
 
 	return (
-		<motion.header
-			initial={{ y: -100 }}
-			animate={{ y: 0 }}
-			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-				isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-			}`}
+		<header
+			className="absolute top-0 left-0 right-0 z-50 bg-transparent"
 		>
-			<div className='max-w-7xl mx-auto px-6 py-4'>
+			<div className="max-w-7xl mx-auto px-6 py-4">
 				<div className='flex justify-between items-center'>
 					{/* Logo */}
 					<motion.div whileHover={{ scale: 1.05 }} className='cursor-pointer' onClick={() => scrollToSection('hero')}>
@@ -53,7 +49,7 @@ export default function ModernHeader() {
 							alt='G2B Logo'
 							width={300}
 							height={100}
-							className={`w-auto transition-all duration-300 ${isScrolled ? 'h-10' : 'h-16'}`}
+							className="w-auto h-16 transition-all duration-300"
 							style={{
 								filter: 'drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.9)) drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5))',
 							}}
@@ -67,9 +63,7 @@ export default function ModernHeader() {
 							<button
 								key={item.id}
 								onClick={() => scrollToSection(item.id)}
-								className={`font-semibold transition-all hover:scale-105 ${
-									isScrolled ? 'text-g2b-gray hover:text-g2b-purple' : 'text-white hover:text-g2b-yellow'
-								}`}
+								className="font-semibold transition-all hover:scale-105 text-white hover:text-g2b-yellow"
 							>
 								{item.label}
 							</button>
@@ -82,11 +76,7 @@ export default function ModernHeader() {
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							href='mailto:contato@g2b.com.br'
-							className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-								isScrolled
-									? 'bg-g2b-purple text-white hover:bg-g2b-darkpurple'
-									: 'bg-g2b-yellow text-g2b-darkpurple hover:bg-yellow-500'
-							}`}
+							className="bg-g2b-yellow text-g2b-darkpurple hover:bg-yellow-500 px-6 py-3 rounded-full font-semibold transition-all"
 						>
 							{t.nav.contact}
 						</motion.a>
@@ -95,7 +85,7 @@ export default function ModernHeader() {
 					{/* Mobile Menu Button */}
 					<button onClick={() => setIsMenuOpen(!isMenuOpen)} className='lg:hidden p-2' aria-label='Toggle menu'>
 						<svg
-							className={`w-6 h-6 ${isScrolled ? 'text-g2b-purple' : 'text-white'}`}
+							className="w-6 h-6 text-white"
 							fill='none'
 							stroke='currentColor'
 							viewBox='0 0 24 24'
@@ -139,6 +129,6 @@ export default function ModernHeader() {
 					)}
 				</AnimatePresence>
 			</div>
-		</motion.header>
+		</header>
 	);
 }
