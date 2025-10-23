@@ -41,21 +41,18 @@ export default function ModernHeader() {
 			className="absolute top-0 left-0 right-0 z-50 bg-transparent"
 		>
 			<div className="max-w-7xl mx-auto px-6 py-4">
-				<div className='flex justify-between items-center'>
+				<div className='flex justify-center items-center'>
 					{/* Logo */}
-					<motion.div whileHover={{ scale: 1.05 }} className='cursor-pointer' onClick={() => scrollToSection('hero')}>
+					{/* <motion.div whileHover={{ scale: 1.05 }} className='cursor-pointer' onClick={() => scrollToSection('hero')}>
 						<Image
-							src='/images/logo_fundo_transparente.png'
+							src='/images/brand_colored.svg'
 							alt='G2B Logo'
 							width={300}
 							height={100}
 							className="w-auto h-16 transition-all duration-300"
-							style={{
-								filter: 'drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.9)) drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5))',
-							}}
 							priority
 						/>
-					</motion.div>
+					</motion.div> */}
 
 					{/* Desktop Navigation */}
 					<nav className='hidden lg:flex items-center gap-8'>
@@ -70,8 +67,8 @@ export default function ModernHeader() {
 						))}
 					</nav>
 
-					{/* CTA Button Desktop */}
-					<div className='hidden lg:block'>
+					{/* CTA Button Desktop - Commented */}
+					{/* <div className='hidden lg:block'>
 						<motion.a
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
@@ -80,7 +77,7 @@ export default function ModernHeader() {
 						>
 							{t.nav.contact}
 						</motion.a>
-					</div>
+					</div> */}
 
 					{/* Mobile Menu Button */}
 					<button onClick={() => setIsMenuOpen(!isMenuOpen)} className='lg:hidden p-2' aria-label='Toggle menu'>

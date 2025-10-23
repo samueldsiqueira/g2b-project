@@ -150,7 +150,7 @@ export default function ModernHome() {
 						transition={{ duration: 0.8 }}
 						className='mb-8 flex flex-col items-center'
 					>
-						<motion.div 
+						<motion.div
 							className='relative'
 							animate={{
 								scale: [1, 1.02, 1],
@@ -166,12 +166,9 @@ export default function ModernHome() {
 								alt='G2B Logo'
 								width={1200}
 								height={400}
-								className='w-auto h-64 md:h-80 lg:h-96 xl:h-[28rem]'
+								className='w-auto h-96 md:h-[32rem] lg:h-[40rem] xl:h-[48rem]'
 								priority
 							/>
-							<p className='absolute -bottom-1 right-0 text-g2b-yellow font-bold text-sm md:text-base lg:text-lg xl:text-xl italic tracking-wide'>
-								Good to Be
-							</p>
 						</motion.div>
 					</motion.div>
 
