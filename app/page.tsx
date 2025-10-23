@@ -103,7 +103,7 @@ export default function ConstructionPage() {
 				className='text-center'
 			>
 				<h2 className='text-2xl font-semibold mb-4 text-g2b-yellow'>
-					Enquanto nosso site não fica pronto nos acompanhe nas nossas redes sociais e canais!
+					Enquanto o site não fica pronto, siga-nos nas redes sociais e canais!
 				</h2>
 				<div className='flex justify-center gap-6'>
 					{socialLinks.map((social, index) => {
