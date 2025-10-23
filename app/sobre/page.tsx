@@ -2,6 +2,7 @@
 
 import Layout from '../../components/Layout';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '../../locales/LanguageContext';
 
 export default function Sobre() {
@@ -9,6 +10,7 @@ export default function Sobre() {
   
   return (
     <Layout>
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-g2b-purple to-g2b-darkpurple text-white py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -20,6 +22,7 @@ export default function Sobre() {
         </div>
       </section>
 
+      {/* Sobre a G2B */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl mx-auto">
@@ -36,7 +39,148 @@ export default function Sobre() {
                 {t.about.content.text3}
               </p>
             </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Sobre a Gisele Blak Bernat */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-g2b-purple mb-4">
+              Gisele Blak Bernat
+            </h2>
+            <p className="text-xl text-g2b-lightpurple font-semibold">
+              Fundadora e CEO da G2B
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {/* Foto Principal - Placeholder para você adicionar */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
+                {/* TODO: Adicionar foto da Gisele aqui */}
+                <div className="aspect-[3/4] bg-gradient-to-br from-g2b-purple/10 to-g2b-lightpurple/10 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <svg className="w-24 h-24 mx-auto mb-4 text-g2b-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <p className="text-g2b-gray text-sm">
+                      Adicionar foto profissional<br />da Gisele Blak Bernat
+                    </p>
+                    <p className="text-xs text-g2b-gray mt-2">
+                      Imagem em: /public/images/gisele-principal.jpg
+                    </p>
+                  </div>
+                </div>
+                {/* Quando adicionar a foto, use:
+                <Image 
+                  src="/images/gisele-principal.jpg" 
+                  alt="Gisele Blak Bernat"
+                  width={400}
+                  height={533}
+                  className="w-full h-auto"
+                />
+                */}
+              </div>
+            </div>
+
+            {/* Biografia e Informações */}
+            <div className="lg:col-span-2">
+              <div className="bg-white rounded-2xl p-8 shadow-xl h-full">
+                <h3 className="text-2xl font-bold text-g2b-purple mb-6">Sobre</h3>
+                
+                <div className="space-y-4 text-g2b-gray leading-relaxed">
+                  {/* TODO: Adicionar biografia completa da Gisele */}
+                  <p>
+                    Gisele Blak Bernat é uma renomada especialista em Gestão de Projetos, Governança Corporativa e Compliance, 
+                    com mais de 15 anos de experiência no mercado brasileiro e internacional.
+                  </p>
+                  
+                  <p>
+                    Fundou a G2B em 2008 com o objetivo de oferecer soluções customizadas em treinamento executivo e 
+                    assessoria empresarial, ajudando organizações a alcançarem excelência em gestão.
+                  </p>
+
+                  <p>
+                    Ao longo de sua carreira, conduziu mais de 500 projetos de capacitação e consultoria, impactando 
+                    positivamente milhares de profissionais em diversos setores da economia.
+                  </p>
+
+                  {/* Seção de Certificações e Qualificações */}
+                  <div className="mt-8 pt-8 border-t border-gray-200">
+                    <h4 className="text-xl font-bold text-g2b-purple mb-4">Certificações e Qualificações</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <svg className="w-5 h-5 text-g2b-yellow mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>Project Management Professional (PMP)®</span>
+                      </li>
+                      <li className="flex items-start">
+                        <svg className="w-5 h-5 text-g2b-yellow mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>MBA em Gestão Empresarial</span>
+                      </li>
+                      <li className="flex items-start">
+                        <svg className="w-5 h-5 text-g2b-yellow mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>Especialização em Governança Corporativa</span>
+                      </li>
+                      {/* TODO: Adicionar mais certificações conforme necessário */}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Galeria de Fotos Adicionais */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-g2b-purple mb-8 text-center">Galeria</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Placeholder para 4 fotos adicionais */}
+              {[1, 2, 3, 4].map((i) => (
+                <div key={i} className="bg-white rounded-lg overflow-hidden shadow-lg">
+                  <div className="aspect-square bg-gradient-to-br from-g2b-purple/10 to-g2b-lightpurple/10 flex items-center justify-center">
+                    <div className="text-center p-4">
+                      <svg className="w-12 h-12 mx-auto mb-2 text-g2b-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <p className="text-xs text-g2b-gray">
+                        Foto {i}
+                      </p>
+                      <p className="text-xs text-g2b-gray mt-1">
+                        /images/gisele-{i}.jpg
+                      </p>
+                    </div>
+                  </div>
+                  {/* Quando adicionar as fotos, use:
+                  <Image 
+                    src={`/images/gisele-${i}.jpg`}
+                    alt={`Gisele Blak Bernat - Foto ${i}`}
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                  */}
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-sm text-g2b-gray mt-6">
+              💡 Para adicionar as fotos, coloque-as em <code className="bg-gray-100 px-2 py-1 rounded">/public/images/</code> e 
+              descomente o código de imagem nos componentes acima.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Áreas de Atuação */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               <Link href="/capacitacao" 
                 className="group bg-gradient-to-br from-g2b-purple to-g2b-darkpurple hover:from-g2b-darkpurple hover:to-g2b-purple text-white p-8 rounded-2xl text-center font-bold text-xl transition-all hover:scale-105 shadow-lg">
