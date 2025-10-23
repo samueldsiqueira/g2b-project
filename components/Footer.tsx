@@ -5,6 +5,13 @@ import { useLanguage } from '../locales/LanguageContext';
 export default function Footer() {
   const { t } = useLanguage();
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <footer className="bg-g2b-darkpurple text-white py-12 mt-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -21,11 +28,48 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-g2b-yellow">{t.footer.links}</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="/sobre" className="text-gray-300 hover:text-white transition-colors">{t.nav.about}</a></li>
-              <li><a href="/solucoes" className="text-gray-300 hover:text-white transition-colors">{t.nav.solutions}</a></li>
-              <li><a href="/capacitacao" className="text-gray-300 hover:text-white transition-colors">{t.nav.training}</a></li>
-              <li><a href="/assessoria" className="text-gray-300 hover:text-white transition-colors">{t.nav.consulting}</a></li>
-              <li><a href="http://g2blog2b.wordpress.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('about')}
+                  className="text-gray-300 hover:text-white transition-colors text-left"
+                >
+                  {t.nav.about}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('solutions')}
+                  className="text-gray-300 hover:text-white transition-colors text-left"
+                >
+                  {t.nav.solutions}
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('training')}
+                  className="text-gray-300 hover:text-white transition-colors text-left"
+                >
+                  Capacitação
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('consulting')}
+                  className="text-gray-300 hover:text-white transition-colors text-left"
+                >
+                  Assessoria
+                </button>
+              </li>
+              <li>
+                <a 
+                  href="http://g2blog2b.wordpress.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Blog
+                </a>
+              </li>
             </ul>
           </div>
 

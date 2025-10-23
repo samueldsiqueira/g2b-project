@@ -28,7 +28,7 @@ export default function ModernHome() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       ),
-      link: '/capacitacao',
+      sectionId: 'training',
       color: 'bg-g2b-purple',
     },
     {
@@ -40,31 +40,31 @@ export default function ModernHome() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
-      link: '/assessoria',
+      sectionId: 'consulting',
       color: 'bg-g2b-lightpurple',
     },
     {
       id: 3,
-      title: 'Biblioteca',
-      description: 'Acesso a recursos e materiais exclusivos para seu aprendizado contínuo.',
+      title: 'Sobre Gisele',
+      description: 'Conheça a fundadora e CEO da G2B, sua formação e experiência.',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
       ),
-      link: '/biblioteca',
+      sectionId: 'gisele',
       color: 'bg-g2b-yellow',
     },
     {
       id: 4,
-      title: 'Soluções',
-      description: 'Soluções personalizadas para as necessidades específicas da sua organização.',
+      title: 'Entre em Contato',
+      description: 'Fale conosco para soluções personalizadas para sua organização.',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      link: '/solucoes',
+      sectionId: 'contact',
       color: 'bg-gradient-to-r from-g2b-purple to-g2b-lightpurple',
     },
   ];
@@ -256,8 +256,138 @@ export default function ModernHome() {
         </div>
       </section>
 
+      {/* Gisele Blak Bernat Section */}
+      <section id="gisele" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-gradient-to-r from-g2b-purple to-g2b-darkpurple rounded-3xl shadow-2xl overflow-hidden">
+            <div className="p-8 md:p-12">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  Gisele Blak Bernat
+                </h2>
+                <p className="text-xl text-g2b-yellow font-semibold">
+                  Fundadora e CEO da G2B
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Foto */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  className="md:col-span-1"
+                >
+                  <div className="relative">
+                    <div className="rounded-2xl overflow-hidden shadow-2xl">
+                      <Image 
+                        src="/images/gisele1.png" 
+                        alt="Gisele Blak Bernat"
+                        width={400}
+                        height={533}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    {/* Social Links */}
+                    <div className="mt-6 flex flex-wrap gap-3 justify-center">
+                      <a 
+                        href="https://www.linkedin.com/in/gisele-blak-bernat" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-[#0077b5] text-white px-4 py-2 rounded-lg hover:bg-[#006399] transition-all shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span className="font-semibold text-sm">LinkedIn</span>
+                      </a>
+
+                      <a 
+                        href="https://www.instagram.com/g2b.treinamento" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-4 py-2 rounded-lg hover:opacity-90 transition-all shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span className="font-semibold text-sm">Instagram</span>
+                      </a>
+
+                      <a 
+                        href="mailto:contato@g2b.com.br" 
+                        className="flex items-center gap-2 bg-g2b-yellow text-g2b-darkpurple px-4 py-2 rounded-lg hover:bg-yellow-500 transition-all shadow-lg"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span className="font-semibold text-sm">Email</span>
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Conteúdo */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="md:col-span-2"
+                >
+                  <div className="space-y-6 text-white leading-relaxed">
+                    <p className="text-lg">
+                      Gisele Blak Bernat é <strong>Mestre em Engenharia Civil de Produção</strong> com ênfase em Sistemas 
+                      de Gestão, Produção e Qualidade pela UFF. <strong>Master Certificate in Project Management</strong> pela{' '}
+                      <strong>ESI &amp; George Washington University</strong>. Membro do PMI Chapter Rio com{' '}
+                      <strong>certificação Project Management Professional (PMP)</strong> desde 2002.
+                    </p>
+                    
+                    <p className="text-lg">
+                      Programa Internacional de Desarollo Gerencial pela Telefônica Móviles &amp; IEDE, na Espanha. 
+                      MBA Executivo de Gestão de Negócios pelo IBMEC. Bacharel em Ciências com Dignidade Acadêmica 
+                      &quot;cum laude&quot; pela UFRJ (Engenheira Civil).
+                    </p>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm border-l-4 border-g2b-yellow p-6 rounded-lg">
+                      <h3 className="font-bold text-g2b-yellow mb-3 text-xl">Experiência Acadêmica</h3>
+                      <p>
+                        Professora do Programa de Aperfeiçoamento em Gestão de Projetos do COPPEAD, da Pós-Graduação em Gestão 
+                        e Gerenciamento de Projetos da Escola Politécnica da UFRJ e dos cursos de MBA em Gestão de Projetos e 
+                        MBA em Gestão de Negócios Imobiliários e da Construção Civil da FGV. Autora de diversos artigos em 
+                        congressos e coautora do livro Capacitação em Gerenciamento de Projetos pela editora Brasport.
+                      </p>
+                    </div>
+                    
+                    <p className="text-lg">
+                      Em 2010, foi convidada a integrar a Diretoria Executiva do IPMA Brasil® (International 
+                      Project Management Association) e realizou trabalho voluntário como Diretora de Marketing da instituição.
+                    </p>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm border-l-4 border-g2b-yellow p-6 rounded-lg">
+                      <h3 className="font-bold text-g2b-yellow mb-3 text-xl">Experiência Profissional</h3>
+                      <p>
+                        Mais de dez anos em gerenciamento de projetos de grande porte em empresas de Engenharia 
+                        Civil e de Telecomunicações, tendo participado como Gerente de Projetos da execução do Parque Gráfico do 
+                        Jornal O Globo pela Odebrecht e do <em>start-up</em> da Intelig Telecom pela Bechtel Método Telecom, bem 
+                        como projetos de implantação da rede GSM, implantação de plataformas de serviços de valor agregado (Caixa 
+                        Postal, MMS, GTW VAS) e lançamento de produtos de marketing na Telefônica Celular/Vivo.
+                      </p>
+                    </div>
+                    
+                    <p className="text-lg">
+                      Atualmente é sócia e Diretora Executiva da G2B Treinamento Executivo &amp; Assessoria Empresarial LTDA., 
+                      tendo atuado como Consultora e Gerente de Projetos para diversos clientes de grande porte.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Solutions/Services Section with Carousel */}
-      <section id="solutions" className="py-20 bg-white">
+      <section id="solutions" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -312,12 +442,16 @@ export default function ModernHome() {
                   <span className="text-lg">Certificação reconhecida</span>
                 </li>
               </ul>
-              <Link
-                href="/capacitacao"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  document.getElementById('training')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="inline-block bg-g2b-yellow hover:bg-yellow-500 text-g2b-darkpurple px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
               >
                 Conheça nossos cursos
-              </Link>
+              </motion.button>
             </motion.div>
 
             <motion.div
@@ -388,12 +522,16 @@ export default function ModernHome() {
               <p className="text-lg text-g2b-gray mb-8 leading-relaxed">
                 Trabalhamos lado a lado com você para desenvolver e implementar soluções customizadas que atendam às necessidades específicas do seu negócio.
               </p>
-              <Link
-                href="/assessoria"
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  document.getElementById('consulting')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="inline-block bg-g2b-lightpurple hover:bg-g2b-purple text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105"
               >
                 Solicite uma consultoria
-              </Link>
+              </motion.button>
             </motion.div>
           </div>
         </div>
