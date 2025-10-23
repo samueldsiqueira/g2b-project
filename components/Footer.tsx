@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from '../locales/LanguageContext';
+import Image from 'next/image';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -18,7 +19,15 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Sobre */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-g2b-yellow">G2B</h3>
+            <div className="mb-4">
+              <Image
+                src='/images/brand_colored.svg'
+                alt='G2B Logo'
+                width={400}
+                height={150}
+                className="w-auto h-24"
+              />
+            </div>
             <p className="text-sm text-gray-300 leading-relaxed">
               {t.footer.about}
             </p>
