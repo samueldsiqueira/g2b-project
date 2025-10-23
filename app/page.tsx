@@ -10,6 +10,7 @@ import ServicesCarousel from '../components/ServicesCarousel';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import Footer from '../components/Footer';
 import WhatsAppFloat from '../components/WhatsAppFloat';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function ModernHome() {
   const { t } = useLanguage();
@@ -103,6 +104,7 @@ export default function ModernHome() {
     <div className="min-h-screen bg-white">
       <ModernHeader />
       <WhatsAppFloat />
+      <ScrollToTop />
 
       {/* Hero Section com Parallax */}
       <section
