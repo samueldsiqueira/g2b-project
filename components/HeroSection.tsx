@@ -100,7 +100,7 @@ export default function HeroSection() {
 							>
 								<Link
 									href={item.href}
-									className='text-g2b-yellow hover:text-white transition-colors duration-300 text-lg  font-bold'
+									className='text-g2b-yellow hover:text-white transition-colors duration-300 text-3xl font-bold'
 								>
 									{item.label}
 								</Link>
@@ -136,7 +136,7 @@ export default function HeroSection() {
 							className='text-white space-y-8'
 						>
 							<motion.h1
-								className='text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight'
+								className='text-4xl lg:text-5xl xl:text-8xl font-bold leading-tight'
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.6, delay: 0.5 }}
@@ -161,7 +161,7 @@ export default function HeroSection() {
 								<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 									<Link
 										href='#agendar'
-										className='inline-block bg-g2b-yellow text-g2b-purple px-8 py-4 rounded-md font-semibold text-lg hover:bg-yellow-400 transition-colors duration-300 text-center shadow-lg hover:shadow-xl'
+										className='inline-block bg-g2b-yellow text-g2b-purple px-8 py-4 rounded-md font-semibold text-xl hover:bg-yellow-400 transition-colors duration-300 text-center shadow-lg hover:shadow-xl'
 									>
 										Agendar diagnóstico gratuito
 									</Link>
