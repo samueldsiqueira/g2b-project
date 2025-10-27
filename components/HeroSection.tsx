@@ -203,7 +203,7 @@ export default function HeroSection() {
 								}}
 							>
 								<Image
-									src='/gisele/png-sem-fundo/gisele-sem-fundo-3.png'
+									src='/gisele/png-sem-fundo/gisele-sem-fundo-2.png'
 									alt='Gisele Blak Bernat'
 									fill
 									sizes='(max-width: 768px) 100vw, 60vw'
