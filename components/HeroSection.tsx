@@ -100,7 +100,7 @@ export default function HeroSection() {
 							>
 								<Link
 									href={item.href}
-									className='text-g2b-yellow hover:text-white transition-colors duration-300 text-base font-light'
+									className='text-g2b-yellow hover:text-white transition-colors duration-300 text-lg  font-bold'
 								>
 									{item.label}
 								</Link>
@@ -142,7 +142,7 @@ export default function HeroSection() {
 								transition={{ duration: 0.6, delay: 0.5 }}
 							>
 								<motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7, duration: 0.8 }}>
-									Oficinas e Soluções que transformam projetos em resultados reais.
+									Soluções que transformam ideias projetos em projetos com resultados.
 								</motion.span>
 								<motion.span
 									className='block mt-4'
@@ -203,7 +203,7 @@ export default function HeroSection() {
 								}}
 							>
 								<Image
-									src='/gisele/png-sem-fundo/gisele-sem-fundo-2.png'
+									src='/gisele/png-sem-fundo/gisele-sem-fundo-3.png'
 									alt='Gisele Blak Bernat'
 									fill
 									sizes='(max-width: 768px) 100vw, 60vw'
