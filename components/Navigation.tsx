@@ -17,7 +17,7 @@ export default function Navigation() {
   const [activeItem, setActiveItem] = useState('');
 
   return (
-    <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+    <nav className="absolute left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
       <ul className="flex flex-col gap-6">
         {menuItems.map((item) => (
           <li key={item.href}>
