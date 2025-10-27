@@ -9,9 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'g2b-yellow': 'rgb(231, 170, 39)',
+        'g2b-yellow': '#facc15',
         'g2b-red': 'rgb(144, 3, 2)',
-        'g2b-purple': 'rgb(50, 2, 113)',
+        'g2b-purple': '#562e84',
+        'g2b-purple-dark': 'rgb(50, 2, 113)',
       },
     },
   },
