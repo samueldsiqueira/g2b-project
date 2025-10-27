@@ -15,11 +15,11 @@ const socialLinks = [
 ];
 
 const Countdown = () => {
-	const [timeLeft, setTimeLeft] = useState({ days: 10, hours: 0, minutes: 0, seconds: 0 });
+	const [timeLeft, setTimeLeft] = useState({ days: 7, hours: 0, minutes: 0, seconds: 0 });
 
 	useEffect(() => {
-		const countdownDate = new Date();
-		countdownDate.setDate(countdownDate.getDate() + 10);
+		// Fixed target date: November 3, 2025 at 23:59:59
+		const countdownDate = new Date('2025-11-03T23:59:59');
 
 		const timer = setInterval(() => {
 			const now = new Date().getTime();
