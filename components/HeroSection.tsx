@@ -65,7 +65,7 @@ export default function HeroSection() {
 				transition={{ duration: 0.6 }}
 				className='absolute top-8 left-1/2 -translate-x-1/2 z-10 lg:hidden'
 			>
-				<Image src='/images/logo_g2b.png' alt='G2B Logo' width={120} height={120} className='drop-shadow-lg' />
+				<Image src='/gisele/logo_branca_sem_fundo.png' alt='G2B Logo' width={120} height={120} className='' />
 			</motion.div>
 
 			{/* Logo and Navigation - aligned vertically with staggered animation */}
@@ -79,7 +79,7 @@ export default function HeroSection() {
 					}}
 					className='mb-8'
 				>
-					<Image src='/images/logo_g2b.png' alt='G2B Logo' width={480} height={480} className='drop-shadow-lg' />
+					<Image src='/gisele/logo_branca_sem_fundo.png' alt='G2B Logo' width={480} height={480} className='' />
 				</motion.div>
 
 				{/* Navigation with staggered animation */}
@@ -100,7 +100,7 @@ export default function HeroSection() {
 							>
 								<Link
 									href={item.href}
-									className='text-white hover:text-g2b-yellow transition-colors duration-300 text-base font-light'
+									className='text-g2b-yellow hover:text-white transition-colors duration-300 text-base font-light'
 								>
 									{item.label}
 								</Link>
@@ -176,14 +176,14 @@ export default function HeroSection() {
 								</motion.div>
 							</motion.div>
 
-							<motion.p
+							{/* <motion.p
 								className='text-sm lg:text-base text-gray-300 mt-6'
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								transition={{ delay: 1.3, duration: 0.8 }}
 							>
 								Projetos, Riscos, Suprimentos, Sustentabilidade e IA — tudo em um método que une estratégia, prática e resultado.
-							</motion.p>
+							</motion.p> */}
 						</motion.div>
 
 						{/* Image Right with floating animation */}
@@ -191,7 +191,7 @@ export default function HeroSection() {
 							initial={{ opacity: 0, scale: 0.8 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
-							className='relative h-[500px] lg:h-[750px] -mr-8 lg:-mr-16'
+							className='relative h-[800px] lg:h-[1050px] -mr-8 lg:-mr-16'
 						>
 							<motion.div
 								className='relative w-full h-full overflow-visible'
@@ -207,7 +207,7 @@ export default function HeroSection() {
 									alt='Gisele Blak Bernat'
 									fill
 									sizes='(max-width: 768px) 100vw, 60vw'
-									className='object-contain object-center scale-x-[-1] scale-110'
+									className='object-contain object-center scale-x-[-1] scale-125'
 									priority
 								/>
 							</motion.div>
