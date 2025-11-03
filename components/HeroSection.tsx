@@ -142,7 +142,7 @@ export default function HeroSection() {
 								transition={{ duration: 0.6, delay: 0.5 }}
 							>
 								<motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7, duration: 0.8 }}>
-									Soluções que transformam ideias projetos em projetos com resultados.
+									Soluções que transformam ideias em projetos com resultados reais
 								</motion.span>
 								<motion.span
 									className='block mt-4'
