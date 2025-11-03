@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import FontSwitcher from '@/components/FontSwitcher';
 
 export const metadata: Metadata = {
 	title: 'G2B - Treinamento Executivo & Assessoria Empresarial',
@@ -13,10 +12,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='pt-BR' className="font-lato">
+		<html lang='pt-BR' className="font-poppins">
 			<body>
 				{children}
-				<FontSwitcher />
 			</body>
 		</html>
 	);
